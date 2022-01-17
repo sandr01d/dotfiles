@@ -121,3 +121,14 @@ elif [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]; then
 else
  echo 'fzf key bindings not found'
 fi
+
+# Use autosuggestion
+if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+elif [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh]; then
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+else
+  echo 'zsh-autosuggestions not found'
+fi
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
