@@ -1,0 +1,1 @@
+My personal dotfiles. In the branch ``minimal`` I try to keep the number of dependencies low. It is designed for machines I tend to ssh into every now and then. The branch ``extended`` is designed for day to day use.

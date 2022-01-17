@@ -1,0 +1,7 @@
+[user]
+	name = sandroid
+	signingkey = 91418C9982B8B76E
+[core]
+	autocrlf = input
+[bulkworkspaces]
+	aur = $HOME/repos/aur
