@@ -75,9 +75,6 @@ alias diff='diff --color=auto'					                        # Color diff output
 
 ## Environment Variables
 export EDITOR=/usr/bin/nano
-# Set CTYPE to support umlauts
-export LC_CTYPE="en_US.UTF-8"
-export LANG="en_US.UTF-8"
 # Color man pages
 export LESS_TERMCAP_mb=$'\E[01;32m'
 export LESS_TERMCAP_md=$'\E[01;32m'
