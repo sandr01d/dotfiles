@@ -71,6 +71,12 @@ alias diff='diff --color=auto'					                        # Color diff output
 
 ## Environment Variables
 export EDITOR=/usr/bin/nano
+ARROW=$'\xe2\x9d\xaf\x0a'
+export FZF_DEFAULT_OPTS=\
+"--cycle \
+--prompt=$ARROW \
+--pointer=$ARROW \
+--marker=$ARROW"
 # Color man pages
 export LESS_TERMCAP_mb=$'\E[01;32m'
 export LESS_TERMCAP_md=$'\E[01;32m'
