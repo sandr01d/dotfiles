@@ -142,18 +142,18 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
 # Use powerlevel10k theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source ~/repos/zsh-plugins/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Use git-extras completions
-source /usr/share/doc/git-extras/git-extras-completion.zsh
+source /usr/share/zsh/vendor-completions/_git-extras
 
 # Use forgit git plugin
-source /usr/share/zsh/plugins/forgit-git/forgit.plugin.zsh
+source ~/repos/zsh-plugins/forgit/forgit.plugin.zsh
 
 # Use history substring search
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ~/repos/zsh-plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 # Bind UP and DOWN arrow keys to history substring search
 zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
