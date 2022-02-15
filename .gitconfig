@@ -8,3 +8,5 @@
 	diffFilter = diff-so-fancy --patch
 [bulkworkspaces]
 	aur = $HOME/repos/aur
+[color "diff"]
+	meta = blue
