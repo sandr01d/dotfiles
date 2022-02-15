@@ -67,6 +67,7 @@ alias grep='grep --color=auto'					                        # Color grep output
 alias gp='git pull'
 alias gP='git push'
 alias gS='git status'
+alias gc='git commit'
 alias diff='diff --color=auto'					                        # Color diff output
 
 ## Environment Variables
