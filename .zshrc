@@ -74,6 +74,7 @@ alias gS='git status'
 alias gc='git commit'
 alias gr='git reset'
 alias diff='diff --color=auto'					                        # Color diff output
+alias code='vscodium'
 
 ## Environment Variables
 export EDITOR=/usr/bin/nano
