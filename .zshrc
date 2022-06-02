@@ -73,6 +73,7 @@ alias gP='git push'
 alias gS='git status'
 alias gc='git commit'
 alias gr='git reset'
+alias gpp='git pull && git push'
 alias diff='diff --color=auto'					                        # Color diff output
 alias code='vscodium'
 
