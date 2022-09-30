@@ -4,6 +4,8 @@
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	autocrlf = input
+	# fixes broken special characters
+	quotePath = false
 [interactive]
 	diffFilter = diff-so-fancy --patch
 [bulkworkspaces]
@@ -11,10 +13,14 @@
 [color "diff"]
 	meta = blue
 [credential "https://github.com"]
-	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [submodule]
 	recurse = true
+[merge]
+  tool = code
+[mergetool]
+  keepBackup = false
+[mergetool "code"]
+  cmd = vscodium --wait --merge $REMOTE $LOCAL $BASE $MERGED
