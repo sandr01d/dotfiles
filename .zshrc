@@ -76,6 +76,19 @@ alias gr='git reset'
 alias diff='diff --color=auto'					                        # Color diff output
 alias bat='batcat'
 
+# pipe the json file of iVP plan files to stdout
+function p() {
+  unzip -ca "$1" plan.json | sed '1,2d'
+}
+# open the json of iVP plan files in bat
+function bpl() {
+  p "$1" | bat -l json --file-name "$1"
+}
+# open the json of iVP plan files in code
+function cpl() {
+  p "$1" | code -
+}
+
 ## Environment Variables
 export EDITOR=/usr/bin/nano
 ARROW=$'\xe2\x9d\xaf\x0a'
