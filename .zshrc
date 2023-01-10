@@ -17,7 +17,8 @@ setopt histignorealldups                                        # If a new comma
 setopt autocd                                                   # if only directory path is entered, cd there.
 
 # Theming
-autoload -U compinit colors zcalc
+autoload -U colors zcalc
+autoload -U +X compinit
 compinit -d
 colors
 
@@ -76,6 +77,7 @@ alias gr='git reset'
 alias gpp='git pull && git push'
 alias diff='diff --color=auto'					                        # Color diff output
 alias code='vscodium'
+alias xc='xclip -selection clipboard'
 
 ## Environment Variables
 export EDITOR=/usr/bin/nano
@@ -154,6 +156,7 @@ source /usr/share/doc/git-extras/git-extras-completion.zsh
 
 # Use forgit git plugin
 source /usr/share/zsh/plugins/forgit-git/forgit.plugin.zsh
+FORGIT_COPY_CMD='xclip -selection clipboard'
 
 # Use history substring search
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
