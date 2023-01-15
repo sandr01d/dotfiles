@@ -155,8 +155,8 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/doc/git-extras/git-extras-completion.zsh
 
 # Use forgit git plugin
+export FORGIT_COPY_CMD='xclip -selection clipboard'
 source /usr/share/zsh/plugins/forgit-git/forgit.plugin.zsh
-FORGIT_COPY_CMD='xclip -selection clipboard'
 
 # Use history substring search
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
@@ -166,3 +166,6 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+# Add packages installed with cargo to PATH
+export PATH="$HOME/.cargo/bin:$PATH"
