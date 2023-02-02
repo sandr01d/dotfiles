@@ -89,6 +89,11 @@ function cpl() {
   p "$1" | code -
 }
 
+# Functions
+function dsf() {
+  diff -u $1 $2 | diff-so-fancy
+}
+
 ## Environment Variables
 export EDITOR=/usr/bin/nano
 ARROW=$'\xe2\x9d\xaf\x0a'
