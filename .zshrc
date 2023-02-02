@@ -76,6 +76,7 @@ alias gr='git reset'
 alias diff='diff --color=auto'					                        # Color diff output
 alias bat='batcat'
 
+# Functions
 # pipe the json file of iVP plan files to stdout
 function p() {
   unzip -ca "$1" plan.json | sed '1,2d'
@@ -88,8 +89,6 @@ function bpl() {
 function cpl() {
   p "$1" | code -
 }
-
-# Functions
 function dsf() {
   diff -u $1 $2 | diff-so-fancy
 }
