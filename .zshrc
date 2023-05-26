@@ -58,6 +58,11 @@ bindkey '^H' backward-kill-word                                 # delete previou
 bindkey '5~' kill-word						                              # delete next world with ctrl+delete
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
+# Functions
+function dsf() {
+  diff -u $1 $2 | diff-so-fancy
+}
+
 # Aliases
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
