@@ -163,6 +163,7 @@ source /usr/share/doc/git-extras/git-extras-completion.zsh
 
 # Use forgit git plugin
 export FORGIT_COPY_CMD='xclip -selection clipboard'
+export FORGIT_CHECKOUT_BRANCH_BRANCH_GIT_OPTS='--all --sort=-committerdate'
 source /usr/share/zsh/plugins/forgit-git/forgit.plugin.zsh
 
 # Use history substring search
