@@ -103,6 +103,8 @@ export LESS_TERMCAP_us=$'\E[01;36m'
 export LESS=-r
 # Set bat theme
 export BAT_THEME="Visual Studio Dark+"
+# Use delta with pacdiff
+export DIFFPROG='delta --diff-so-fancy'
 
 ## Plugins
 # Use syntax highlighting
