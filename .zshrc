@@ -18,8 +18,8 @@ setopt autocd                                                   # if only direct
 
 # Theming
 autoload -U colors zcalc
-autoload -U +X compinit
-compinit -d
+autoload -Uz compinit
+compinit
 colors
 
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
