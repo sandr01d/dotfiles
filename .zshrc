@@ -10,8 +10,9 @@ setopt histignorealldups                                        # If a new comma
 setopt autocd                                                   # if only directory path is entered, cd there.
 
 # Theming
-autoload -U compinit colors zcalc
-compinit -d
+autoload -U colors zcalc
+autoload -Uz compinit
+compinit
 colors
 
 # Custom prompt similar to red hat
