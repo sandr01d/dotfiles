@@ -249,7 +249,7 @@ include /usr/share/nano/default.nanorc
 include /usr/share/nano/markdown.nanorc
 include /usr/share/nano/nanohelp.nanorc
 include /usr/share/nano/sh.nanorc
-include /usr/share/nano/yaml-custom.nanorc
+include /usr/share/nano/yaml.nanorc
 
 ## From the nano-syntax-highlighting package
 include /usr/share/nano-syntax-highlighting/arduino.nanorc
