@@ -95,7 +95,7 @@ function dsf() {
 }
 
 ## Environment Variables
-export EDITOR=/usr/bin/nano
+export EDITOR=nvim
 ARROW=$'\xe2\x9d\xaf\x0a'
 export FZF_DEFAULT_OPTS=\
 "--cycle \
