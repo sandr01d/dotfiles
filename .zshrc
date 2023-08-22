@@ -62,21 +62,6 @@ bindkey '^H' backward-kill-word                                 # delete previou
 bindkey '5~' kill-word						                              # delete next world with ctrl+delete
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
-# Aliases
-alias df='df -h'                                                # Human-readable sizes
-alias free='free -m'                                            # Show sizes in MB
-alias q="exit"
-alias ls="ls -lh --color"					                              # ls output as list with human-readable sizes and color
-alias cls="clear"
-alias grep='grep --color=auto'					                        # Color grep output
-alias gp='git pull'
-alias gP='git push'
-alias gS='git status'
-alias gc='git commit'
-alias gr='git reset'
-alias diff='diff --color=auto'					                        # Color diff output
-alias bat='batcat'
-
 # Functions
 # pipe the json file of iVP plan files to stdout
 function p() {
@@ -93,6 +78,21 @@ function cpl() {
 function dsf() {
   diff -u $1 $2 | diff-so-fancy
 }
+
+# Aliases
+alias df='df -h'                                                # Human-readable sizes
+alias free='free -m'                                            # Show sizes in MB
+alias q="exit"
+alias ls="ls -lh --color"					                              # ls output as list with human-readable sizes and color
+alias cls="clear"
+alias grep='grep --color=auto'					                        # Color grep output
+alias gp='git pull'
+alias gP='git push'
+alias gS='git status'
+alias gc='git commit'
+alias gr='git reset'
+alias diff='diff --color=auto'					                        # Color diff output
+alias bat='batcat'
 
 ## Environment Variables
 export EDITOR=nvim
