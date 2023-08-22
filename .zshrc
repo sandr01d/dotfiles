@@ -78,6 +78,13 @@ function cpl() {
 function dsf() {
   diff -u $1 $2 | diff-so-fancy
 }
+# Travel up n directories
+function u() {
+  for _ in {1..$1}
+  do
+    cd ..
+  done
+}
 
 # Aliases
 alias df='df -h'                                                # Human-readable sizes
