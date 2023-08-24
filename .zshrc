@@ -59,7 +59,7 @@ bindkey '^[Od' backward-word
 bindkey '^[[1;5D' backward-word
 bindkey '^[[1;5C' forward-word
 bindkey '^H' backward-kill-word                                 # delete previous word with ctrl+backspace
-bindkey '5~' kill-word						                              # delete next world with ctrl+delete
+bindkey '^[[3;5~' kill-word				                              # delete next world with ctrl+delete
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
 # Functions
