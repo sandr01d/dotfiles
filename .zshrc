@@ -20,7 +20,8 @@ setopt autocd                                                   # if only direct
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored completion (different colors for dirs/files/etc)
+zstyle ':completion:*' list-colors "$\{(s.:.)$(dircolors)}"     # Colored completion (different colors for dirs/files/etc)
+zstyle ':completion:*' menu select                              # Show which entry of the completions is selected
 # Speed up completions
 zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
