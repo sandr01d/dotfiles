@@ -148,6 +148,10 @@ else
 fi
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+bindkey '^[[F'  autosuggest-accept                              # End key
+bindkey '^@'    autosuggest-accept                              # Ctrl+Space
+bindkey '^[^M'  autosuggest-execute                             # Alt+Enter
+bindkey '^['    autosuggest-clear                               # Escape key
 
 # Use powerlevel10k theme
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
