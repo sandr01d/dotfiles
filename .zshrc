@@ -23,9 +23,10 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensiti
 zstyle ':completion:*' list-colors "$\{(s.:.)$(dircolors)}"     # Colored completion (different colors for dirs/files/etc)
 zstyle ':completion:*' menu select                              # Show which entry of the completions is selected
 # Speed up completions
-zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
+
+# History
 HISTFILE=~/.zhistory
 HISTSIZE=2500
 SAVEHIST=3000
