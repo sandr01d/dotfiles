@@ -33,12 +33,13 @@ SAVEHIST=3000
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
 ## Keybindings
-bindkey -e
+bindkey '^A'	beginning-of-line				# Ctrl-a
 bindkey '^[[7~' beginning-of-line                               # Home key
 bindkey '^[[H' beginning-of-line                                # Home key
 if [[ "${terminfo[khome]}" != "" ]]; then
   bindkey "${terminfo[khome]}" beginning-of-line                # [Home] - Go to beginning of line
 fi
+bindkey '^E'	end-of-line					# Ctrl-e
 bindkey '^[[8~' end-of-line                                     # End key
 bindkey '^[[F' end-of-line                                      # End key
 if [[ "${terminfo[kend]}" != "" ]]; then
@@ -148,7 +149,6 @@ else
 fi
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
-bindkey '^[[F'  autosuggest-accept                              # End key
 bindkey '^@'    autosuggest-accept                              # Ctrl+Space
 bindkey '^[^M'  autosuggest-execute                             # Alt+Enter
 bindkey '^['    autosuggest-clear                               # Escape key
