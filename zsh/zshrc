@@ -1,0 +1,49 @@
+### Options ###
+setopt correct							# Auto correct mistakes
+setopt hashlistall						# Hash the entire path before command completion or corrections. Prevents false reports of spelling errors.
+setopt extendedglob						# Extended globbing. Allows using regular expressions with '*'
+setopt nocaseglob						# Case insensitive globbing
+setopt numericglobsort						# Sort filenames numerically when it makes sense
+setopt share_history						# Share history between multiple running instances
+setopt histignorealldups					# If a new command is a duplicate, remove the older one
+setopt autocd							# if only directory path is entered, cd there.
+
+### Completions ###
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
+zstyle ':completion:*' list-colors "${(s.:.)$(dircolors)}"	# Colored completion (different colors for dirs/files/etc)
+zstyle ':completion:*' menu select				# Show which entry of the completions is selected
+# Speed up completions
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
+### Key Bindings ###
+bindkey '^[[H'	  beginning-of-line				# Home key
+bindkey '^A'	  beginning-of-line				# Ctrl-a
+bindkey '^[[F'	  end-of-line					# End key
+bindkey '^E'	  end-of-line					# Ctrl-e
+bindkey '^[[2~'	  overwrite-mode				# Insert key
+# Autosuggestions
+bindkey '^@'	  autosuggest-accept				# Ctrl+Space
+bindkey '^[^M'	  autosuggest-execute				# Ctrl+Enter
+bindkey '^['	  autosuggest-clear				# Escape key
+# Navigate words with ctrl+arrow-keys
+bindkey '^[[1;5D' backward-word					# Ctrl-arrow_left: Move cursor one word backward
+bindkey '^[[1;5C' forward-word					# Ctrl-arrow_right: Move cursor one word forward
+bindkey '^H'	  backward-kill-word				# Ctrl-backspace: delete previous word
+bindkey '^[[3;5~' kill-word       				# Ctrl-delete: delete next world
+# Navigate words with vim-like bindings
+bindkey '^[b'	  backward-word					# Alt-b: Move cursor one word backward
+bindkey '^[w'	  forward-word					# Alt-w: Move cursor one word forward
+
+### Functions ###
+function dsf() {
+  diff -u $1 $2 | diff-so-fancy
+}
+# Travel up N directories
+function u() {
+  for _ in {1..$1}
+  do
+    cd ..
+  done
+}
+
