@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     diff-so-fancy # used in zsh function in zshrc
+    nix-zsh-completions
   ];
   programs.zsh = {
     enable = true;
