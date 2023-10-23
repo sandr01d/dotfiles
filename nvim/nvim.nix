@@ -3,8 +3,9 @@
 {
   home.packages = with pkgs; [
     lua-language-server
-    nil
+    nil # nix language server
     fd # recommended for telescope-nvim
+    nodePackages.bash-language-server
   ];
 
   programs.neovim = {

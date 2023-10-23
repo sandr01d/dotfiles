@@ -114,6 +114,9 @@ lspconf.lua_ls.setup {
   end
 }
 
+-- bash-language-server
+lspconf.bashls.setup{}
+
 -- completions
 local luasnip = require'luasnip'
 local cmp = require'cmp'
