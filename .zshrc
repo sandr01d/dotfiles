@@ -82,6 +82,7 @@ alias cls="clear"
 alias grep='grep --color=auto'					                        # Color grep output
 alias gp='git pull'
 alias gP='git push'
+alias gf='git fetch'
 alias gS='git status'
 alias gc='git commit'
 alias gr='git reset'
