@@ -11,11 +11,5 @@
     free = "free -m";
     q = "exit";
     ls = "ls -lh --color";
-    gp = "git pull";
-    gP = "git push";
-    gS = "git status";
-    gr = "git reset";
-    gc = "git commit";
-    gpp = "git pull && git push";
-  }; 
+    }; 
 }

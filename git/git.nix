@@ -24,5 +24,14 @@
       "credential \"https://gist.github.com\"".helper = "${pkgs.gh}/bin/gh auth git-credential";
     };
   };
+
+  home.shellAliases = {
+    gp = "git pull";
+    gP = "git push";
+    gS = "git status";
+    gr = "git reset";
+    gc = "git commit";
+    gpp = "git pull && git push";
+  };
 }
 
