@@ -32,6 +32,7 @@
     gr = "git reset";
     gc = "git commit";
     gpp = "git pull && git push";
+    gf = "git fetch";
   };
 }
 
