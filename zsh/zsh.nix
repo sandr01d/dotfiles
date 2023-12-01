@@ -9,7 +9,7 @@
     enable = true;
     # Enter into a directory if typed directly into shell.
     autocd = true;
-    enableSyntaxHighlighting = true;
+    syntaxHighlighting.enable = true;
     enableAutosuggestions = true;
     enableCompletion = true;
     historySubstringSearch = { enable = true; };
