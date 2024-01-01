@@ -37,11 +37,11 @@ bindkey '^[w'	  forward-word					# Alt-w: Move cursor one word forward
 
 ### Functions ###
 function dsf() {
-  diff -u $1 $2 | diff-so-fancy
+  diff -u "$1" "$2" | diff-so-fancy
 }
 # Travel up N directories
 function u() {
-  for _ in {1..$1}
+  for _ in {1.."$1"}
   do
     cd ..
   done
