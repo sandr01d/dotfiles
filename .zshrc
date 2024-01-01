@@ -74,11 +74,11 @@ function cpl() {
   p "$1" | code -
 }
 function dsf() {
-  diff -u $1 $2 | diff-so-fancy
+  diff -u "$1" "$2" | diff-so-fancy
 }
 # Travel up n directories
 function u() {
-  for _ in {1..$1}
+  for _ in {1.."$1"}
   do
     cd ..
   done
@@ -185,7 +185,7 @@ source ~/repos/zsh-plugins/forgit/forgit.plugin.zsh
 source ~/repos/zsh-plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 # Bind UP and DOWN arrow keys to history substring search
 zmodload zsh/terminfo
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
+bindkey "${terminfo[kcuu1]}" history-substring-search-up
+bindkey "${terminfo[kcud1]}" history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
