@@ -60,13 +60,16 @@ require('telescope').setup{
   }
 }
 local builtin = require('telescope.builtin')
-keymap.set('n', '<leader>ff',  builtin.find_files, {})
+keymap.set('n', '<leader>ff', builtin.find_files, {})
 -- list previously opened files
 keymap.set('n', '<leader>fo', builtin.oldfiles, {})
+-- search for a string in the current directory
 keymap.set('n', '<leader>fg', builtin.live_grep, {})
 keymap.set('n', '<leader>fb', builtin.buffers, {})
 keymap.set('n', '<leader>fh', builtin.help_tags, {})
 keymap.set('n', '<leader>fk', builtin.keymaps, {})
+-- fuzzy search the current file
+keymap.set('n', '<leader>fc', builtin.current_buffer_fuzzy_find, {})
 
 -- misc. keymap
 -- disable highlight and finish search
