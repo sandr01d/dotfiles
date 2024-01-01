@@ -163,7 +163,11 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/doc/git-extras/git-extras-completion.zsh
 
 # Use forgit git plugin
-export FORGIT_COPY_CMD='xclip -selection clipboard'
+if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
+  export FORGIT_COPY_CMD='wl-copy'
+else
+  export FORGIT_COPY_CMD='xclip -selection clipboard'
+fi
 export FORGIT_CHECKOUT_BRANCH_BRANCH_GIT_OPTS='--all --sort=-committerdate'
 source /usr/share/zsh/plugins/forgit-git/forgit.plugin.zsh
 source /usr/share/zsh/plugins/forgit-git/completions/git-forgit.zsh
