@@ -10,6 +10,5 @@
     df = "df -h";
     free = "free -m";
     q = "exit";
-    ls = "ls -lh --color";
     }; 
 }
