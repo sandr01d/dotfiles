@@ -19,6 +19,10 @@ setopt autocd                                                   # if only direct
 # Completions
 autoload -Uz compinit
 compinit
+# Bash completions for azure-cli
+autoload -Uz bashcompinit
+bashcompinit
+source /etc/bash_completion.d/azure-cli
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
 zstyle ':completion:*' list-colors "$\{(s.:.)$(dircolors)}"     # Colored completion (different colors for dirs/files/etc)
 zstyle ':completion:*' menu select                              # Show which entry of the completions is selected
