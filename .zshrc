@@ -67,6 +67,7 @@ function dsf() {
 }
 # Travel up n directories
 function u() {
+  [[ $1 =~ ^[0-9]+$ ]] || return 1
   for _ in {1.."$1"}
   do
     cd ..
