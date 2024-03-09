@@ -91,7 +91,11 @@ alias gr='git reset'
 alias gpp='git pull && git push'
 alias diff='diff --color=auto'					                        # Color diff output
 alias code='vscodium'
-alias xc='xclip -selection clipboard'
+if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
+  alias xc='wl-copy'
+else
+  alias xc='xclip -selection clipboard'
+fi
 
 ## Environment Variables
 export EDITOR=nvim
