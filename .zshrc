@@ -90,7 +90,6 @@ alias gc='git commit'
 alias gr='git reset'
 alias gpp='git pull && git push'
 alias diff='diff --color=auto'					                        # Color diff output
-alias code='vscodium'
 if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
   alias xc='wl-copy'
 else
