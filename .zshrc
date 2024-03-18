@@ -92,6 +92,7 @@ alias gpp='git pull && git push'
 alias diff='diff --color=auto'					                        # Color diff output
 if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
   alias xc='wl-copy'
+  alias code='code --ozone-platform-hint=auto'
 else
   alias xc='xclip -selection clipboard'
 fi
