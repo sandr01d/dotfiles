@@ -24,3 +24,5 @@
   keepBackup = false
 [mergetool "code"]
   cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+[commit]
+	gpgsign = true
