@@ -23,4 +23,4 @@
 [mergetool]
   keepBackup = false
 [mergetool "code"]
-  cmd = vscodium --wait --merge $REMOTE $LOCAL $BASE $MERGED
+  cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
