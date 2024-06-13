@@ -1,0 +1,80 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](color_bg)\
+[$directory](bg:color_bg)\
+[▓▒░](color_bg) """
+
+right_format = """
+[░▒▓](color_bg)\
+[$git_branch](bg:color_bg)\
+[$git_commit](bg:color_bg)\
+[$git_state](bg:color_bg)\
+[$git_status](bg:color_bg)\
+[$status](bg:color_bg)\
+[$sudo](bg:color_bg)\
+[](color_bg)
+"""
+add_newline = true
+
+palette = 'almost_black'
+
+[palettes.almost_black]
+color_fg = '#af875f'
+color_bg = '236'
+
+[character]
+disabled = true
+
+[directory]
+style = 'fg:color_fg bg:color_bg'
+fish_style_pwd_dir_length = 3
+truncate_to_repo = false
+repo_root_style = 'fg:bold color_fg bg:236'
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+style = 'fg:green bg:color_bg'
+only_attached = true
+
+[git_commit]
+style = 'fg:yellow bg:color_bg'
+tag_disabled = false
+tag_symbol = ' 🏷 '
+
+[git_state]
+style = 'fg:red bg:color_bg'
+format = '[$state( $progress_current/$progress_total)]($style) '
+rebase = 'rebase'
+merge = 'merge'
+revert = 'revert'
+cherry_pick = 'cherry pick'
+bisect = 'bisect'
+am = 'am'
+am_or_rebase = 'am/rebase'
+
+[git_metrics]
+disabled = false
+added_style = 'fg:green bg:color_bg'
+deleted_style = 'fg:red bg:color_bg'
+
+[git_status]
+format = '([\($all_status$ahead_behind\)]($style) )'
+style = 'fg:color_fg bg:color_bg'
+conflicted = '☇'
+stashed = '*'
+
+[line_break]
+disabled = true
+
+[status]
+disabled = false
+style = 'fg:bold red bg:color_bg'
+map_symbol = false
+
+[sudo]
+disabled = true
+format = '$symbol($style)'
+style = 'bg: color_bg'
+
