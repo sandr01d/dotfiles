@@ -30,3 +30,5 @@
 	blame-timestamp-output-format = %F
 [pager]
 	blame = delta
+[stash]
+	showIncludeUntracked = true
