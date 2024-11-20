@@ -2,8 +2,13 @@
 
 {
   home.packages = with pkgs; [
-    gh
+    zsh-forgit
   ];
+
+  home.sessionVariables = {
+    FORGIT_CHECKOUT_BRANCH_BRANCH_GIT_OPTS = "--all --sort=-committerdate";
+    FORGIT_BLAME_GIT_OPTS = "--date=iso8601";
+  };
   
   programs.git = {
     enable = true;
@@ -33,6 +38,11 @@
     gc = "git commit";
     gpp = "git pull && git push";
     gf = "git fetch";
+  };
+
+  programs.gh = {
+    enable = true;
+    gitCredentialHelper.enable = true;
   };
 }
 
