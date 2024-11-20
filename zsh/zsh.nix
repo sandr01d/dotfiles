@@ -10,7 +10,7 @@
     # Enter into a directory if typed directly into shell.
     autocd = true;
     syntaxHighlighting.enable = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
     enableCompletion = true;
     historySubstringSearch = { enable = true; };
     history = {
