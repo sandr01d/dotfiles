@@ -25,7 +25,7 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu -fn 'sans Regular-11' | xargs swaymsg exec --
+set $menu dmenu_run -fn "sans Regular 11" -nb "#181818" -sb "#AF875F" 
 
 set $toggle_mute pactl set-source-mute 0 toggle
 
