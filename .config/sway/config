@@ -8,6 +8,8 @@
 # See https://wiki.archlinux.org/title/XDG_Desktop_Portal#xdg-desktop-portal-wlr_does_not_start_automatically_on_sway
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+# Start SwayNotificationCenter
+exec swaync
 
 ### Variables
 #
@@ -236,6 +238,9 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym XF86Search exec $menu
+
+# Toggle control center
+bindsym $mod+Shift+n exec swaync-client -t -sw
 
 #
 # Status Bar:
