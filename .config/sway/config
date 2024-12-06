@@ -264,12 +264,12 @@ default_border pixel 4
 client.focused "#AF875F" "#AF875F" "#FFFFFF" "#AF875F"
 # Font for window titles
 font pango:sans 11
+# Cursor shape
+seat seat0 xcursor_theme breeze_cursors
 # Set gnome schema (for apps)
 set $gnome-schema org.gnome.desktop.interface
 # Gnome settings for apps that use it, e.g. Firefox
 exec_always {
-    # Cursor theme
-    gsettings set $gnome-schema cursor-theme breeze_cursors
     # Font family 
     gsettings set org.gnome.desktop.interface font-name sans
 }
