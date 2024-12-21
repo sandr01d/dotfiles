@@ -84,6 +84,11 @@ input * {
         scroll_factor 1.0
     }
 
+### Misc configuration
+#
+# Focus windows on activation
+focus_on_window_activation focus
+
 ### Key bindings
 #
 # Basics:
