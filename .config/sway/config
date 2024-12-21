@@ -31,8 +31,8 @@ set $toggle_mute pactl set-source-mute 0 toggle
 
 ### Keymap configuration
 input * {
-	xkb_layout "de"
-	xkb_numlock enable
+    xkb_layout "de"
+    xkb_numlock enable
 }
 
 ### Output configuration
