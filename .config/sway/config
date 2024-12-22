@@ -25,7 +25,10 @@ set $term alacritty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_run -fn "FiraSans-13" -nb "#181818" -sb "#AF875F"
+set $menu rofi -show combi
+set $window_switcher rofi -show window
+set $runner rofi -show run
+set $calc rofi -show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '{result}' | $clip"
 # Take a screenshot and copy it to the clipboard
 set $screenshot_copy grim -g "$(slurp)" - | wl-copy
 # Take screenshot and save it
@@ -105,6 +108,16 @@ focus_on_window_activation focus
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym alt+space exec $menu
+
+    # Start your tab switcher
+    bindsym alt+tab exec $window_switcher
+
+    # Start your command runner
+    bindsym ctrl+space exec $runner
+
+    # Start your calculator
+    bindsym ctrl+alt+c exec $calc
 
     # Take a screenshot and copy it to the clipboard
     bindsym $mod+insert exec $screenshot_copy
@@ -252,6 +265,7 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym XF86Search exec $menu
+bindsym XF86Calculator exec $calc
 
 # Toggle control center
 bindsym $mod+Shift+n exec swaync-client -t -sw
