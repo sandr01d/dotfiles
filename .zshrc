@@ -78,7 +78,8 @@ function u() {
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
 alias q="exit"
-alias ll="ls -lh --color"					                              # ls output as list with human-readable sizes and color
+alias ll="eza --icons=always -l"
+alias erd="erd --human --icons"
 alias cls="clear"
 alias grep='grep --color=auto'					                        # Color grep output
 alias gp='git pull'
