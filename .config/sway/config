@@ -8,6 +8,8 @@
 # See https://wiki.archlinux.org/title/XDG_Desktop_Portal#xdg-desktop-portal-wlr_does_not_start_automatically_on_sway
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+# Let cliphist listen for clipboard changes
+exec wl-paste --watch cliphist store
 # Start SwayNotificationCenter
 exec swaync
 
@@ -22,10 +24,16 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term alacritty
+set $clip wl-copy
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_run -fn "FiraSans-13" -nb "#181818" -sb "#AF875F"
+set $menu rofi -show combi
+set $window_switcher rofi -show window
+set $runner rofi -show run
+set $calc rofi -show calc -modi calc -no-show-match -no-sort -calc-command "echo -n '{result}' | $clip"
+# Use rofi as dmenu replacement
+set $dmenu rofi -dmenu
 
 set $toggle_mute pactl set-source-mute 0 toggle
 
@@ -101,6 +109,16 @@ focus_on_window_activation focus
 
     # Start your launcher
     bindsym $mod+d exec $menu
+    bindsym alt+space exec $menu
+    
+    # Start your tab switcher
+    bindsym alt+tab exec $window_switcher
+
+    # Start your command runner
+    bindsym ctrl+space exec $runner
+
+    # Start your calculator
+    bindsym ctrl+alt+c exec $calc
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -243,6 +261,10 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym XF86Search exec $menu
+bindsym XF86Calculator exec $calc
+
+# cliphist (clipboard history) picker
+bindsym alt+v exec cliphist list | $dmenu | cliphist decode | wl-copy
 
 # Toggle control center
 bindsym $mod+Shift+n exec swaync-client -t -sw
