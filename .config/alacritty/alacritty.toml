@@ -1,0 +1,55 @@
+[[keyboard.bindings]]
+key = "Insert"
+mods = "Control"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "Insert"
+mods = "Shift"
+action = "Paste"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "0x757575"
+blue = "0x19b2f4"
+cyan = "0x16a085"
+green = "0x22c883"
+magenta = "0xd670d6"
+red = "0xf14c4c"
+white = "0xffffff"
+yellow = "0xfdbc4b"
+
+[colors.cursor]
+cursor = "0xffffff"
+text = "0x181818"
+
+[colors.dim]
+black = "0x646464"
+blue = "0x6bcbf4"
+cyan = "0x6dbcac"
+green = "0x2e503c"
+magenta = "0x9b639b"
+red = "0x593636"
+white = "0x818181"
+yellow = "0xb48049"
+
+[colors.normal]
+black = "0x313131"
+blue = "0x138cbf"
+cyan = "0x1abc9c"
+green = "0x13b65f"
+magenta = "0xa136a1"
+red = "0xcd3131"
+white = "0xe5e5e5"
+yellow = "0xd38c35"
+
+[colors.primary]
+background = "0x181818"
+bright_foreground = "0xffffff"
+dim_foreground = "0xc6c6c6"
+foreground = "0xcccccc"
+
+[cursor.style]
+shape = "Underline"
