@@ -91,6 +91,7 @@ alias gc='git commit'
 alias gr='git reset'
 alias gpp='git pull && git push'
 alias diff='diff --color=auto'					                        # Color diff output
+alias hx='helix'
 if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
   alias xc='wl-copy'
   alias code='code --ozone-platform-hint=auto'
@@ -99,7 +100,7 @@ else
 fi
 
 ## Environment Variables
-export EDITOR=nvim
+export EDITOR=helix
 ARROW=$'\xe2\x9d\xaf\x0a'
 export FZF_DEFAULT_OPTS=\
 "--cycle \
