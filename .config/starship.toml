@@ -35,7 +35,7 @@ repo_root_style = 'fg:bold color_fg bg:236'
 
 [git_branch]
 format = '[$symbol$branch(:$remote_branch)]($style) '
-style = 'fg:green bg:color_bg'
+style = 'fg:color_fg bg:color_bg'
 only_attached = true
 
 [git_commit]
