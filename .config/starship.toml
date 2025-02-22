@@ -60,16 +60,27 @@ added_style = 'fg:green bg:color_bg'
 deleted_style = 'fg:red bg:color_bg'
 
 [git_status]
-format = '([\($all_status$ahead_behind\)]($style) )'
+format = "[ $all_status$ahead_behind ]($style)"
 style = 'fg:color_fg bg:color_bg'
-conflicted = '☇'
-stashed = '*'
+ahead = "󰜹"
+behind = "󰜰"
+conflicted = "󰳤 "
+deleted = " "
+diverged = ""
+modified = " "
+renamed = " "
+staged = " "
+stashed = " "
+typechanged = " "
+untracked = " "
+up_to_date = "󰤓"
 
 [line_break]
 disabled = true
 
 [status]
 disabled = false
+symbol = " "
 style = 'fg:bold red bg:color_bg'
 map_symbol = false
 
