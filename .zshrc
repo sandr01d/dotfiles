@@ -1,9 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+eval "$(starship init zsh)"
 
 ## zsh options
 setopt correct                                                  # Auto correct mistakes
@@ -163,11 +158,6 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 bindkey '^@'    autosuggest-accept                              # Ctrl+Space
 bindkey '^[^M'  autosuggest-execute                             # Alt+Enter
 bindkey '^['    autosuggest-clear                               # Escape key
-
-# Use powerlevel10k theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Use git-extras completions
 source /usr/share/doc/git-extras/git-extras-completion.zsh
