@@ -39,7 +39,7 @@ style = 'fg:color_fg bg:color_bg'
 only_attached = true
 
 [git_commit]
-style = 'fg:yellow bg:color_bg'
+style = 'fg:color_fg bg:color_bg'
 tag_disabled = false
 tag_symbol = ' 🏷 '
 
