@@ -41,7 +41,7 @@ only_attached = true
 [git_commit]
 style = 'fg:color_fg bg:color_bg'
 tag_disabled = false
-tag_symbol = ' 🏷 '
+tag_symbol = ' 󰫎 '
 
 [git_state]
 style = 'fg:red bg:color_bg'
@@ -67,13 +67,12 @@ behind = "󰜰"
 conflicted = "󰳤 "
 deleted = " "
 diverged = ""
-modified = " "
+modified = "󰲶 "
 renamed = " "
-staged = " "
+staged = "󰲻 "
 stashed = " "
 typechanged = " "
 untracked = " "
-up_to_date = "󰤓"
 
 [line_break]
 disabled = true
