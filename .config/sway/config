@@ -26,6 +26,10 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $menu dmenu_run -fn "FiraSans-13" -nb "#181818" -sb "#AF875F"
+# Take a screenshot and copy it to the clipboard
+set $screenshot_copy grim -g "$(slurp)" - | wl-copy
+# Take screenshot and save it
+set $screenshot_save grim -g "$(slurp)"
 
 set $toggle_mute pactl set-source-mute 0 toggle
 
@@ -102,6 +106,11 @@ focus_on_window_activation focus
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    # Take a screenshot and copy it to the clipboard
+    bindsym $mod+insert exec $screenshot_copy
+
+    # Take a screenshot and save it
+    bindsym $mod+shift+insert exec $screenshot_save
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
