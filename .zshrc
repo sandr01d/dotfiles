@@ -163,11 +163,7 @@ bindkey '^['    autosuggest-clear                               # Escape key
 source /usr/share/doc/git-extras/git-extras-completion.zsh
 
 # Use forgit git plugin
-if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
-  export FORGIT_COPY_CMD='wl-copy'
-else
-  export FORGIT_COPY_CMD='xclip -selection clipboard'
-fi
+export FORGIT_COPY_CMD='wl-copy'
 export FORGIT_CHECKOUT_BRANCH_BRANCH_GIT_OPTS='--all --sort=-committerdate'
 export FORGIT_BLAME_GIT_OPTS='--date=iso8601'
 source /usr/share/zsh/plugins/forgit-git/forgit.plugin.zsh
