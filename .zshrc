@@ -119,15 +119,6 @@ fi
 
 # zoxide
 eval "$(zoxide init zsh)"
-
-# nnn
-# cd on quit (^G)
-if [ -f /usr/share/nnn/quitcd/quitcd.bash_zsh ]; then
-    source /usr/share/nnn/quitcd/quitcd.bash_zsh
-fi
-# configure plugins
-export NNN_PLUG='z:autojump;o:fzopen;c:fzcd;l:launch'
-
 # Use fzf completion
 if [ -f /usr/share/fzf/completion.zsh ]; then
   source /usr/share/fzf/completion.zsh
