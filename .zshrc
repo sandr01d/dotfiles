@@ -109,41 +109,15 @@ export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
 ## Plugins
 # Use syntax highlighting
-if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-elif [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-else
-  echo 'zsh-syntax-highlighting not found'
-fi
-
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # zoxide
 eval "$(zoxide init zsh)"
 # Use fzf completion
-if [ -f /usr/share/fzf/completion.zsh ]; then
-  source /usr/share/fzf/completion.zsh
-elif [ -f /usr/share/doc/fzf/examples/completion.zsh ]; then
-  source /usr/share/doc/fzf/examples/completion.zsh
-else
-  echo 'fzf completion not found'
-fi
+source /usr/share/fzf/completion.zsh
 # Use fzf key bindings
-if [ -f /usr/share/fzf/key-bindings.zsh ]; then
-  source /usr/share/fzf/key-bindings.zsh
-elif [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]; then
-  source /usr/share/doc/fzf/examples/key-bindings.zsh
-else
- echo 'fzf key bindings not found'
-fi
-
+source /usr/share/fzf/key-bindings.zsh
 # Use autosuggestion
-if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-elif [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-else
-  echo 'zsh-autosuggestions not found'
-fi
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 bindkey '^@'    autosuggest-accept                              # Ctrl+Space
@@ -152,7 +126,6 @@ bindkey '^['    autosuggest-clear                               # Escape key
 
 # Use git-extras completions
 source /usr/share/doc/git-extras/git-extras-completion.zsh
-
 # Use forgit git plugin
 export FORGIT_COPY_CMD='wl-copy'
 export FORGIT_CHECKOUT_BRANCH_BRANCH_GIT_OPTS='--all --sort=-committerdate'
