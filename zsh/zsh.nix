@@ -21,7 +21,7 @@
       size = 2500;
       save = 3000;
     };
-    initExtra = lib.fileContents ./zshrc;
+    initContent = lib.fileContents ./zshrc;
   };
   
   # Enable dircolors for colored ls output
