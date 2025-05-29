@@ -10,7 +10,7 @@
 
   programs.neovim = {
     enable = true;
-    defaultEditor = true;
+    defaultEditor = false;
     plugins = with pkgs.vimPlugins; [
       gruvbox-nvim # gruvbox colorscheme
       vim-sleuth # automatic 'shiftwidth' & 'expandtab'
