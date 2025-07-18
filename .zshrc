@@ -69,6 +69,19 @@ function u() {
   done
 }
 
+# Fetch a license from GitHub
+function license() {
+  local license
+  license=$(gh api \
+    -H "Accept: application/json" \
+    -H "X-Github-Api-Version: 2022-11-28" \
+    /licenses | jq -r ".[].key" | fzf)
+  gh api \
+    -H "Accept: application/json" \
+    -H "X-GitHub-Api-Version: 2022-11-28" \
+    /licenses/"$license" | jq -r .body
+}
+
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
