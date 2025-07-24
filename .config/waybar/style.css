@@ -56,7 +56,7 @@ button:hover {
 }
 
 #mode {
-    background-color: #565656;
+    background-color: #3b3b3b;
     border-bottom: 3px solid #af875f;
 }
 
@@ -73,10 +73,24 @@ button:hover {
 #mode,
 #bluetooth,
 tooltip {
-    padding: 0 6px;
     color: #ffffff;
+    background-color: #3b3b3b;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#tray,
+#mode,
+#bluetooth {
+    padding: 0 8px;
     margin: 2px 0;
-    background-color: #565656;
 }
 
 #window,
@@ -105,7 +119,7 @@ tooltip {
 
 @keyframes blink {
     to {
-        background-color: #565656;
+        background-color: #3b3b3b;
     }
 }
 
@@ -131,12 +145,11 @@ label:focus {
 }
 
 #pulseaudio.muted {
-    background-color: #b2b2b2;
-    color: #565656;
+    color: #b2b2b2;
 }
 
 #wireplumber.muted {
-    background-color: #b62e2e;
+    color: #b2b2b2;
 }
 
 #custom-media {
@@ -162,16 +175,15 @@ label:focus {
 }
 
 #mpd.disconnected {
-    background-color: #b62e2e;
+    color: #b2b2b2;
 }
 
 #mpd.stopped {
-    background-color: #b2b2b2;
-    color: #565656;
+    color: #b2b2b2;
 }
 
 #mpd.paused {
-    background-color: #af875f;
+    color: #b2b2b2;
 }
 
 #keyboard-state {
