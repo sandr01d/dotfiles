@@ -12,6 +12,7 @@
         "cpu",
         "memory",
         "temperature",
+        "power-profiles-daemon",
         "backlight",
         "battery",
         "tray"
@@ -54,7 +55,18 @@
         "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
         "on-click-middle": "pavucontrol"
     },
-    "bluetooth": {
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "{profile}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": " ",
+        "power-saver": " "
+      }
+    },
+   "bluetooth": {
         "format": "{status} ",
         "format-disabled": "", // an empty format will hide the module
         "format-connected": "{num_connections} ",
@@ -109,11 +121,11 @@
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
+            " ",
+            " ",
+            " ",
+            " ",
+            " "
         ]
     },
     "clock": {
