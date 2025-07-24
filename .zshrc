@@ -109,12 +109,8 @@ alias gr='git reset'
 alias gpp='git pull && git push'
 alias diff='diff --color=auto'					                        # Color diff output
 alias hx='helix'
-if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
-  alias xc='wl-copy'
-  alias code='code --ozone-platform-hint=auto'
-else
-  alias xc='xclip -selection clipboard'
-fi
+alias xc='wl-copy'
+alias code='code --ozone-platform-hint=auto'
 
 ## Environment Variables
 export EDITOR=helix
