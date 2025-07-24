@@ -3,10 +3,10 @@
 @define-color noti-bg rgba(24, 24, 24, 0.9);
 @define-color noti-bg-opaque rgba(24, 24, 24, 0.95);
 @define-color noti-bg-darker rgba(0, 0, 0, 0.95);
-@define-color noti-bg-lighter-opaque rgb(55, 55, 55);
+@define-color noti-bg-lighter-opaque rgb(63, 63, 63);
 @define-color noti-bg-hover rgb(175, 135, 95);
 @define-color noti-bg-hover-opaque rgb(175, 135, 95);
-@define-color noti-bg-focus rgba(68, 68, 68, 0.6);
+@define-color noti-bg-focus rgb(63, 63, 63);
 @define-color noti-close-bg rgba(255, 255, 255, 0.1);
 @define-color noti-close-bg-hover rgba(255, 255, 255, 0.15);
 @define-color text-color rgb(255, 255, 255);
