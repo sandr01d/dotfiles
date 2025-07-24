@@ -30,6 +30,7 @@
     // Using pulseaudio instead of wireplumber because it supports a source
     "pulseaudio": {
         "scroll-step": 0.25, // %, can be a float
+        "reverse-scrolling": true,
         "format": "{volume}% {icon}   {format_source}",
         "format-bluetooth": "{volume}% {icon}   {format_source}",
         "format-bluetooth-muted": " {icon}   {format_source}",
@@ -93,8 +94,8 @@
             "",
             ""
         ],
-        "on-scroll-up": "brightnessctl set 1%+",
-        "on-scroll-down": "brightnessctl set 1%-",
+        "on-scroll-up": "brightnessctl set 1%-",
+        "on-scroll-down": "brightnessctl set 1%+",
         "tooltip": false
     },
     "battery": {
