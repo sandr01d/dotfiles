@@ -31,6 +31,7 @@
   };
 
   home.shellAliases = {
+    # git
     gp = "git pull";
     gP = "git push";
     gS = "git status";
@@ -38,6 +39,31 @@
     gc = "git commit";
     gpp = "git pull && git push";
     gf = "git fetch";
+    # forgit
+    ga = "git forgit add";
+    grh = "git forgit reset_head";
+    glo = "git forgit log";
+    grl = "git forgit reflog";
+    gd = "git forgit diff";
+    gso = "git forgit show";
+    gi = "git forgit ignore";
+    gat = "git forgit attributes";
+    gcf = "git forgit checkout_file";
+    gcb = "git forgit checkout_branch";
+    gco = "git forgit checkout_commit";
+    gct = "git forgit checkout_tag";
+    gbd = "git forgit branch_delete";
+    grc = "git forgit revert_commit";
+    gcl = "git forgit clean";
+    gclean = "git forgit clean";
+    gss = "git forgit stash_show";
+    gsp = "git forgit stash_push";
+    gcp = "git forgit cherry_pick";
+    grb = "git forgit rebase";
+    gfu = "git forgit fixup";
+    gsq = "git forgit squash";
+    grw = "git forgit reword";
+    gbl = "git forgit blame";
   };
 
   programs.gh = {
