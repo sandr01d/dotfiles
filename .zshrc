@@ -111,6 +111,7 @@ alias diff='diff --color=auto'					                        # Color diff output
 alias hx='helix'
 alias xc='wl-copy'
 alias code='code --ozone-platform-hint=auto'
+alias gcl='forgit::clean'
 
 ## Environment Variables
 export EDITOR=helix
