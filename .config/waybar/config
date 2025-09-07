@@ -28,9 +28,8 @@
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
-    // Using pulseaudio instead of wireplumber because it supports a source
-    "pulseaudio": {
-        "scroll-step": 0.25, // %, can be a float
+    "wireplumber": {
+        "scroll-step": 5, // %, can be a float
         "reverse-scrolling": true,
         "format": "{volume}% {icon}   {format_source}",
         "format-bluetooth": "{volume}% {icon}   {format_source}",
