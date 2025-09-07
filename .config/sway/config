@@ -45,7 +45,7 @@ input * {
 ### Output configuration
 #
 # Default wallpapers are available in /usr/share/backgrounds/sway/)
-   output * bg ~/.config/background.png fill
+   output * bg ~/.config/background fill
 #
 # Example configuration:
 #

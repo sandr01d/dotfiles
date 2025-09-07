@@ -1,5 +1,5 @@
 daemonize
-image=~/.config/background.png
+image=~/.config/background
 indicator-idle-visible
 indicator-radius=75
 indicator-thickness=6
