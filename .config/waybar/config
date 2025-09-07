@@ -68,6 +68,7 @@
    "bluetooth": {
         "format": "{status} ",
         "format-disabled": "", // an empty format will hide the module
+        "format-no-controller": "",
         "format-connected": "{num_connections} ",
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n{device_enumerate}",
