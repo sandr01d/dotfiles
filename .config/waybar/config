@@ -77,11 +77,10 @@
     },
     "network": {
         "format-wifi": "{signalStrength}%  ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-ethernet": "",
         "tooltip-format": "\t{ipaddr}/{cidr}\n\t{essid}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
         "on-click-right": "iwctl device wlan0 show | rg \"Powered\\s*on\" && iwctl device wlan0 set-property Powered off || iwctl device wlan0 set-property Powered on"
     },
     "cpu": {
