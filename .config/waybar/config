@@ -6,7 +6,11 @@
         "sway/mode"
     ],
     "modules-center": [
-        "pulseaudio",
+        "clock",
+    ],
+    "modules-right": [
+        "tray",
+        "wireplumber",
         "bluetooth",
         "network",
         "cpu",
@@ -15,10 +19,6 @@
         "power-profiles-daemon",
         "backlight",
         "battery",
-        "tray"
-    ],
-    "modules-right": [
-        "clock"
     ],
     // Modules configuration
     "sway/workspaces": {
