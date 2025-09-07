@@ -197,3 +197,7 @@ label:focus {
 #scratchpad.empty {
   background-color: transparent;
 }
+
+tooltip {
+  background-color: #181818;
+}
