@@ -367,6 +367,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id="thunderbird" title=r"^Password Required.*$"
+    open-floating true
+}
+
+window-rule {
     match app-id=r#"code-oss"#
     match app-id=r#"code"#
     default-column-width { proportion 1.0; }
