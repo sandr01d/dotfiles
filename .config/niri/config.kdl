@@ -372,6 +372,14 @@ window-rule {
     open-floating true
 }
 
+// Open Firefox/Zen/Thunderbird about window as floating
+window-rule {
+    match app-id=r#"thunderbird$"# title=r"^About Mozilla Thunderbird$"
+    match app-id=r#"firefox$"# title=r"^About Mozilla Firefox$"
+    match app-id=r#"zen$"# title=r"^About Zen Browser$"
+    open-floating true
+}
+
 window-rule {
     match app-id=r#"code-oss"#
     match app-id=r#"code"#
