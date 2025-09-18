@@ -1,0 +1,33 @@
+[viewer]
+window = #000000
+
+[info.viewer]
+top_left = ''
+
+[slideshow]
+window = #000000
+
+[keys.slideshow]
+n = next_file
+p = prev_file
+l = next_file
+k = next_file
+h = prev_file
+j = prev_file
+right = next_file
+left = prev_file
+down = next_file
+up = prev_file
+
+[gallery]
+window = #181818
+
+[keys.gallery]
+h = step_left
+j = step_down
+k = step_up
+l = step_right
+
+[font]
+name = 'Fira Sans'
+
