@@ -6,7 +6,7 @@ if [ -z "${DISPLAY}" ]; then
 	1)
 		# Is set to tty when launched without a display manager
 		export XDG_SESSION_TYPE=wayland
-		startplasma-wayland
+		niri-session -l
 		;;
 	esac
 fi
