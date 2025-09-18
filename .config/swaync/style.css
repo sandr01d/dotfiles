@@ -20,15 +20,6 @@
   color: @text-color;
 }
 
-button {
-  font-size: initial;
-  text-shadow: none;
-  background: @noti-bg;
-  border: 1px solid @noti-border-color;
-  box-shadow: none;
-  border-radius: 12px;
-}
-
 button:hover {
   background: @noti-bg-hover;
 }
@@ -71,6 +62,15 @@ scrollbar>range>trough {
 }
 
 /*** SwayNC specific ***/
+.text-button {
+  font-size: initial;
+  text-shadow: none;
+  background: @noti-bg;
+  border: 1px solid @noti-border-color;
+  box-shadow: none;
+  border-radius: 12px;
+}
+
 .notification-row {
   outline: none;
 }
@@ -380,15 +380,6 @@ scrollbar>range>trough {
   /* The parent to all players */
 }
 
-.widget-mpris .widget-mpris-player {
-  padding: 8px;
-  padding: 16px;
-  margin: 16px 20px;
-  background-color: @mpris-album-art-overlay;
-  border-radius: 12px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
-}
-
 .widget-mpris .widget-mpris-player button:hover {
   /* The media player buttons (play, pause, next, etc...) */
   background: @noti-bg-hover;
@@ -406,10 +397,6 @@ scrollbar>range>trough {
 
 .widget-mpris .widget-mpris-player .widget-mpris-subtitle {
   font-size: 1.1rem;
-}
-
-.widget-mpris .widget-mpris-player>box>button {
-  /* Change player control buttons */
 }
 
 .widget-mpris .widget-mpris-player>box>button:hover {

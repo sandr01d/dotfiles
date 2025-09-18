@@ -48,11 +48,12 @@
     }
   },
   "widgets": [
-    "inhibitors",
     "title",
     "dnd",
+    "mpris",
+    "volume",
     "notifications",
-    "volume"
+    "inhibitors"
   ],
   "widget-config": {
     "inhibitors": {
