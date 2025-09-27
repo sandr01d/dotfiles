@@ -121,6 +121,11 @@ output "LG Electronics LG ULTRAGEAR+ 409NTJJC8588" {
     position x=2560 y=0
 }
 
+environment {
+    XDG_SESSION_TYPE "wayland"
+    QT_QPA_PLATFORM "wayland"
+}
+
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
