@@ -369,11 +369,7 @@ window-rule {
 
 window-rule {
     match app-id="thunderbird" title=r"^Password Required.*$"
-    open-floating true
-}
-
-// Open Firefox/Zen/Thunderbird about window as floating
-window-rule {
+    // Open Firefox/Zen/Thunderbird about window as floating
     match app-id=r#"thunderbird$"# title=r"^About Mozilla Thunderbird$"
     match app-id=r#"firefox$"# title=r"^About Mozilla Firefox$"
     match app-id=r#"zen$"# title=r"^About Zen Browser$"
@@ -383,7 +379,7 @@ window-rule {
 window-rule {
     match app-id=r#"code-oss"#
     match app-id=r#"code"#
-    default-column-width { proportion 1.0; }
+    open-maximized true
 }
 
 window-rule {
