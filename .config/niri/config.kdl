@@ -221,7 +221,7 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         off
 
-        width 4
+        width 2
         active-color "#ffc87f"
         inactive-color "#505050"
 
@@ -335,6 +335,16 @@ window-rule {
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
+}
+
+window-rule {
+    match is-window-cast-target=true
+
+    border {
+        on
+        active-color "#F14C4C"
+        inactive-color "#F14C4C"
+    }
 }
 
 // Work around WezTerm's initial configure bug
