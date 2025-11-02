@@ -1,5 +1,5 @@
 server_endpoint = "/run/user/1000/clipcat/grpc.sock"
-finder = "rofi"
+finder = "custom"
 preview_length = 80
 
 [rofi]
@@ -21,8 +21,8 @@ menu_prompt = "Clipcat"
 extra_arguments = []
 
 [custom_finder]
-program = "fzf"
-args = []
+program = "fuzzel"
+args = ["--dmenu"]
 
 [log]
 emit_journald = true
