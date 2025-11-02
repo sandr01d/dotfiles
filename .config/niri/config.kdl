@@ -369,6 +369,12 @@ window-rule {
 }
 
 window-rule {
+    match app-id="org.kde.k3b" title=r"^Ripping Audio Tracks From.+$"
+    default-column-width { fixed 713; }
+    default-window-height { fixed 500; }
+}
+
+window-rule {
     match app-id=r#"code-oss"#
     match app-id=r#"code"#
     open-maximized true
