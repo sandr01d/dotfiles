@@ -24,17 +24,17 @@ capture_image = true
 filter_image_max_size = 5242880
 
 [grpc]
-enable_http = true
+enable_http = false
 enable_local_socket = true
 host = "127.0.0.1"
 port = 45045
 local_socket = "/run/user/1000/clipcat/grpc.sock"
 
 [dbus]
-enable = true
+enable = false
 
 [metrics]
-enable = true
+enable = false
 host = "127.0.0.1"
 port = 45047
 
