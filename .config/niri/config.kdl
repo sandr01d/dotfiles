@@ -369,6 +369,14 @@ window-rule {
 }
 
 window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    open-floating true
+    default-column-width { fixed 1010; }
+    default-window-height { fixed 615; }
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+}
+
+window-rule {
     match app-id="org.kde.k3b" title=r"^Ripping Audio Tracks From.+$"
     default-column-width { fixed 713; }
     default-window-height { fixed 500; }
@@ -417,6 +425,7 @@ binds {
     Alt+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Ctrl+Alt+L hotkey-overlay-title="Lock the Screen" { spawn-sh "loginctl lock-session"; }
     Alt+V hotkey-overlay-title="Clipboard Menu: clipcat & fuzzel" { spawn "clipcat-menu"; }
+    Mod+P hotkey-overlay-title="Password Manager: keepassxc" { spawn-sh "flatpak run org.keepassxc.KeePassXC"; }
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
