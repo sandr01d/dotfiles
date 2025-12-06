@@ -358,13 +358,13 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    match app-id=r#"zen$"# title="^Picture-in-Picture$"
-    match app-id="thunderbird" title=r"^Password Required.*$"
+    match app-id=r#"(?i)firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"(?i)zen$"# title="^Picture-in-Picture$"
+    match app-id="(?i)thunderbird$" title=r"^Password Required.*$"
     // Open Firefox/Zen/Thunderbird about window as floating
-    match app-id=r#"thunderbird$"# title=r"^About Mozilla Thunderbird$"
-    match app-id=r#"firefox$"# title=r"^About Mozilla Firefox$"
-    match app-id=r#"zen$"# title=r"^About Zen Browser$"
+    match app-id=r#"(?i)thunderbird$"# title=r"^About Mozilla Thunderbird$"
+    match app-id=r#"(?i)firefox$"# title=r"^About Mozilla Firefox$"
+    match app-id=r#"(?i)zen$"# title=r"^About Zen Browser$"
     open-floating true
 }
 
