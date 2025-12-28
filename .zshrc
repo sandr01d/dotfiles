@@ -150,6 +150,7 @@ export FORGIT_COPY_CMD='wl-copy'
 export FORGIT_CHECKOUT_BRANCH_BRANCH_GIT_OPTS='--all --sort=-committerdate'
 export FORGIT_BLAME_GIT_OPTS='--date=iso8601'
 export FORGIT_DIR_VIEW='erd --human --icons --layout=inverted --color force'
+export FORGIT_CLEAN_LIST_FILES_OPTS='--exclude-standard'
 source /usr/share/zsh/plugins/forgit-git/forgit.plugin.zsh
 
 # Use history substring search
