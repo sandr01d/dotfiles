@@ -286,6 +286,16 @@ layout {
     }
 }
 
+// Window switcher
+recent-windows {
+    highlight {
+        active-color "#AF875F"
+        urgent-color "#9b0000"
+        padding 8
+        corner-radius 12
+    }
+}
+
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
     skip-at-startup
