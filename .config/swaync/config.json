@@ -92,8 +92,9 @@
       "expand-button-label": "",
       "collapse-button-label": "",
       "show-per-app": true,
-      "show-per-app-icon": false,
-      "show-per-app-label": true
+      "show-per-app-icon": true,
+      "show-per-app-label": true,
+      "expand-per-app": true
     }
   }
 }
