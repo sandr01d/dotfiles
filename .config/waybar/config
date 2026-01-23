@@ -135,6 +135,7 @@
     },
     "custom/power": {
         "format":" ",
-        "on-click": "shutdown now"
+        "on-click": "shutdown now",
+        "tooltip": false,
     }
 }
