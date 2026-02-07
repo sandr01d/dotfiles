@@ -25,7 +25,7 @@ filter_image_max_size = 5242880
 
 [grpc]
 enable_http = false
-enable_local_socket = true
+enable_local_socket = false
 host = "127.0.0.1"
 port = 45045
 local_socket = "/run/user/1000/clipcat/grpc.sock"
