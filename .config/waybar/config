@@ -128,7 +128,19 @@
     },
     "clock": {
         "format": "{:%Y-%m-%d  %H:%M}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+          "mode": "month",
+          "mode-mon-col": 3,
+          "weeks-pos": "right",
+          "iso8601": true,
+          "format": {
+            "days": "<span color='#FFFFFF'><b>{}</b></span>",
+            "weeks": "<span color='#3f3f3f'><b>W{}</b></span>",
+            "weekdays": "<span color='#AF875F'><b>{}</b></span>",
+            "today": "<span color='#AF875F'><b><u>{}</u></b></span>",
+          },
+        },
     },
     "tray": {
         "spacing": 10
