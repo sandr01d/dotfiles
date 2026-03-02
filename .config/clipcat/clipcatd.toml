@@ -15,7 +15,7 @@ level = "INFO"
 
 [watcher]
 enable_clipboard = true
-enable_primary = true
+enable_primary = false
 enable_secondary = false
 sensitive_mime_types = ["x-kde-passwordManagerHint"]
 filter_text_min_length = 1
