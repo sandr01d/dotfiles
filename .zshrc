@@ -112,6 +112,7 @@ alias hx='helix'
 alias xc='wl-copy'
 alias code='code --ozone-platform-hint=auto'
 alias gcl='forgit::clean'
+alias sudo='sudo-rs'
 
 ## Environment Variables
 export EDITOR=helix
