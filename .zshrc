@@ -151,6 +151,8 @@ export FORGIT_BLAME_GIT_OPTS='--date=iso8601'
 export FORGIT_DIR_VIEW='erd --human --icons --layout=inverted --color force'
 export FORGIT_LOG_GRAPH_ENABLE='false'
 export FORGIT_CLEAN_LIST_FILES_OPTS='--exclude-standard'
+# ctrl-d to drop the selected stash.
+export FORGIT_STASH_FZF_OPTS='--bind="ctrl-d:reload(git stash drop $(cut -d: -f1 <<<{}) 1>/dev/null && git stash list)"'
 source /usr/share/zsh/plugins/forgit-git/forgit.plugin.zsh
 
 # Use history substring search
