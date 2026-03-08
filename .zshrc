@@ -138,8 +138,6 @@ source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 # Use autosuggestion
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 bindkey '^@'    autosuggest-accept                              # Ctrl+Space
 bindkey '^[^M'  autosuggest-execute                             # Alt+Enter
 bindkey '^['    autosuggest-clear                               # Escape key
