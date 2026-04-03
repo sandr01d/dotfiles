@@ -693,6 +693,12 @@ binds {
     Mod+Shift+N repeat=false { spawn-sh "swaync-client -t -sw"; }
 }
 
+gestures {
+    hot-corners {
+        off
+    }
+}
+
 cursor {
     xcursor-theme "breeze_cursors"
     hide-when-typing
