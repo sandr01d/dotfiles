@@ -125,6 +125,7 @@ output "LG Electronics LG ULTRAGEAR+ 409NTJJC8588" {
 environment {
     XDG_SESSION_TYPE "wayland"
     QT_QPA_PLATFORM "wayland"
+    QT_QPA_PLATFORMTHEME "qt6ct"
 }
 
 // Settings that influence how windows are positioned and sized.
