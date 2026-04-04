@@ -405,8 +405,6 @@ window-rule {
 window-rule {
     match app-id=r#"com\.nextcloud\.desktopclient\.nextcloud"# title="Nextcloud"
     open-floating true
-    default-column-width { fixed 500; }
-    default-window-height { fixed 600; }
     // x/y = 10 aligns the focus-ring of the window other windows
     // x/y = layout.gaps + focus-ring.width
     default-floating-position x=10 y=10 relative-to="top-right"
