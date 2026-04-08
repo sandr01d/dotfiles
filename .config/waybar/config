@@ -51,7 +51,7 @@
         },
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
-        "on-click-middle": "pavucontrol"
+        "on-click-middle": "alacritty --command=wiremix",
     },
     "power-profiles-daemon": {
       "format": "{icon}",
