@@ -1,3 +1,7 @@
 [[language]]
 name = "git-commit"
 rulers = [120]
+
+[[language]]
+name = "bash"
+auto-format = true
