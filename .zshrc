@@ -62,8 +62,9 @@ function dsf() {
 }
 # Travel up n directories
 function u() {
-    [[ $1 =~ ^[0-9]+$ ]] || return 1
-    for _ in {1.."$1"}; do
+    local count=${1:-1}
+    [[ $count =~ ^[0-9]+$ ]] || return 1
+    for _ in {1.."$count"}; do
         cd ..
     done
 }
