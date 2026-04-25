@@ -35,6 +35,7 @@ binds {
     Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" {
         spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
     }
+    Mod+E hotkey-overlay-title="Cosmic Files" { spawn "cosmic-files"; }
 
     // === Audio Controls ===
     XF86AudioRaiseVolume allow-when-locked=true {
