@@ -1,0 +1,117 @@
+// Enable rounded corners for all windows.
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+window-rule {
+    match is-window-cast-target=true
+
+    border {
+        on
+        active-color "#F14C4C"
+        inactive-color "#F14C4C"
+    }
+}
+
+// Block out sensitive content from screen capture.
+window-rule {
+    // Chat
+    match app-id=r#"(?i)Signal"#
+    match app-id=r#"(?i)Element"#
+    match app-id=r#"org\.kde\.kdeconnect\.sms"#
+
+    // Keys
+    match title=r#"(?i)\.(env|ssh|gpg|pem|key|kdbx|pgpass)"#
+
+    // Mail
+    match app-id=r#"(?i)thunderbird"#
+
+    // Password
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+
+    // VPN
+    match title=r#"(?i)(VPN|OpenVPN|WireGuard)"#
+
+    block-out-from "screen-capture"
+}
+
+// Work around WezTerm's initial configure bug
+// by setting an empty default-column-width.
+window-rule {
+    // This regular expression is intentionally made as specific as possible,
+    // since this is the default config, and we want no false positives.
+    // You can get away with just app-id="wezterm" if you want.
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+
+window-rule {
+    match app-id=r#"(?i)firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"(?i)zen$"# title="^Picture-in-Picture$"
+    match app-id="(?i)thunderbird$" title=r"^Password Required.*$"
+    // Open Firefox/Zen/Thunderbird about window as floating
+    match app-id=r#"(?i)thunderbird$"# title=r"^About Mozilla Thunderbird$"
+    match app-id=r#"(?i)firefox$"# title=r"^About Mozilla Firefox$"
+    match app-id=r#"(?i)zen$"# title=r"^About Zen Browser$"
+    match app-id="(?i)dolphin$" title=r"Copying.+— Dolphin$"
+    match app-id=r#"^dev.zed.Zed$"# title=r"^About Zed$"
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"^dev\.zed\.Zed$"# title="^About Zed$"
+    default-column-width { fixed 390; }
+    default-window-height { fixed 500; }
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    open-floating true
+    default-column-width { fixed 1010; }
+    default-window-height { fixed 615; }
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+}
+
+window-rule {
+    match app-id="org.kde.k3b" title=r"^Ripping Audio Tracks From.+$"
+    default-column-width { fixed 713; }
+    default-window-height { fixed 500; }
+}
+
+window-rule {
+    match app-id=r#"code-oss"#
+    match app-id=r#"code"#
+    match app-id=r#"^dev\.zed\.Zed$"#
+    open-maximized true
+}
+
+window-rule {
+    match app-id=r#"com\.nextcloud\.desktopclient\.nextcloud"# title="Nextcloud"
+    open-floating true
+    // x/y = 10 aligns the focus-ring of the window other windows
+    // x/y = layout.gaps + focus-ring.width
+    default-floating-position x=10 y=10 relative-to="top-right"
+}
+
+window-rule {
+    match app-id=r#"swayimg"#
+    open-floating true
+    default-column-width { proportion 0.5; }
+    draw-border-with-background false
+}
+
+window-rule {
+    match app-id=r#"^steam$"# title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+    open-focused false
+}
+
+// Open dms windows as floating by default
+window-rule {
+    match app-id=r#"org.quickshell$"#
+    match app-id=r#"com.danklinux.dms$"#
+    open-floating true
+}
+
