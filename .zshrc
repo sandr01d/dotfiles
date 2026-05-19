@@ -95,7 +95,7 @@ function y() {
 alias df='df -h'     # Human-readable sizes
 alias free='free -m' # Show sizes in MB
 alias q="exit"
-alias ll="eza --icons=always -l"
+alias ll="eza --icons=always --smart-group -l"
 alias e="erd --human --icons --layout=inverted"
 alias cls="clear"
 alias grep='grep --color=auto' # Color grep output
