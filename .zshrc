@@ -126,8 +126,6 @@ export FZF_DEFAULT_OPTS="--cycle \
 --marker=$ARROW"
 # Use delta with pacdiff
 export DIFFPROG='delta --diff-so-fancy'
-# Rootless docker
-export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
 ## Plugins
 # Use syntax highlighting
