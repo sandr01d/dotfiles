@@ -56,6 +56,7 @@ window-rule {
     match app-id=r#"(?i)zen$"# title=r"^About Zen Browser$"
     match app-id="(?i)dolphin$" title=r"Copying.+— Dolphin$"
     match app-id=r#"^dev.zed.Zed$"# title=r"^About Zed$"
+    match app-id="vrmonitor" title="vrmonitor"
     open-floating true
 }
 
